@@ -7,7 +7,7 @@ import { Text, Button, Box, HStack } from '@chakra-ui/react';
 const IntroStep = ({ startQuiz }) => {
   const handleSkip = () => (window.location.href = 'https://kindgeek.com');
   return (
-    <Box>
+    <Box width="420px">
       <Card>
         <Text>
           Привіт Гік!

@@ -7,7 +7,6 @@ const Question = ({ children }) => (
     color="white"
     borderRadius="3xl"
     bgGradient="linear-gradient(90.82deg, #F252DB 0.18%, #FF893B 101.93%);"
-    position="relative"
   >
     {children}
   </Text>

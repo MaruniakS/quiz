@@ -4,13 +4,24 @@ import NameStep from './NameStep';
 import IntroStep from './IntroStep';
 
 import bgImage from '../../images/quiz-bg.png';
+import QuestionStep from './QuestionStep';
+import ResultStep from './ResultStep';
 
 const Quiz = () => {
   const [step, setStep] = useState(0);
   const [name, setName] = useState('');
+  const [answersState, setAnswersState] = useState({});
 
   const handleNameChange = e => setName(e.target.value);
   const goForward = () => setStep(step + 1);
+
+  const setAnswer = key => {
+    const answerCounter = (answersState[key] || 0) + 1;
+    setAnswersState({
+      ...answersState,
+      [key]: answerCounter,
+    });
+  };
 
   const renderStep = () => {
     if (!step) return <IntroStep startQuiz={goForward} />;
@@ -18,7 +29,9 @@ const Quiz = () => {
       return (
         <NameStep name={name} onChange={handleNameChange} onStart={goForward} />
       );
-    return <h1>{name}</h1>;
+    if (step === 2)
+      return <QuestionStep onAnswer={setAnswer} onFinish={goForward} />;
+    return <ResultStep answers={answersState} />;
   };
 
   return (
@@ -30,7 +43,7 @@ const Quiz = () => {
       height="100vh"
       textAlign="center"
     >
-      <Center maxWidth="100%" width="420px" m="auto" pt={60}>
+      <Center maxWidth="100%" m="auto" pt={40}>
         {renderStep()}
       </Center>
     </Box>

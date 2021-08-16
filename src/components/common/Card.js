@@ -4,7 +4,7 @@ import { Box, HStack, Image, Text } from '@chakra-ui/react';
 import logo from '../../images/logo.png';
 
 const Card = ({ children }) => (
-  <Box textAlign="left" borderRadius="2xl" boxShadow="md">
+  <Box textAlign="left" borderRadius="2xl" boxShadow="md" w="100%">
     <HStack
       bgColor="#F5F2F2"
       color="#7A7777"
