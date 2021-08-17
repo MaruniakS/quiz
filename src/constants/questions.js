@@ -2,7 +2,7 @@ import CHARACTERS, { CATEGORIES } from './characters';
 
 const QUESTIONS = [
   {
-    title: 'У Slack надаю перевагу',
+    title: 'У Slack надаю перевагу:',
     answers: [
       {
         text: 'Розважальному контенту (#меми, random, astro_geek etc)',
