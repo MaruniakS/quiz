@@ -1,4 +1,5 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
+import { useHistory } from 'react-router';
 import {
   Box,
   Text,
@@ -33,6 +34,7 @@ const rotate = keyframes`
 `;
 
 const Initial = ({ startQuiz }) => {
+  const history = useHistory();
   const prefersReducedMotion = usePrefersReducedMotion();
   const animation = prefersReducedMotion
     ? undefined
@@ -48,11 +50,11 @@ const Initial = ({ startQuiz }) => {
     return () => clearInterval(interval);
   }, []);
 
-  const triggerStartQuiz = useCallback(() => startQuiz(), [startQuiz]);
-
   useEffect(() => {
-    if (counter === END_COUNTER) triggerStartQuiz();
-  }, [counter, triggerStartQuiz]);
+    if (counter === END_COUNTER) {
+      history.push('/quiz');
+    }
+  }, [counter, history]);
 
   const showCounter = counter <= START_COUNTER;
 
