@@ -39,7 +39,7 @@ const Quiz = () => {
       bgImage={bgImage}
       bgPosition="center"
       bgRepeat="no-repeat"
-      bgSize="100%"
+      bgSize="cover"
       height="100vh"
       textAlign="center"
     >

@@ -33,7 +33,7 @@ const rotate = keyframes`
     }
 `;
 
-const Initial = ({ startQuiz }) => {
+const Initial = () => {
   const history = useHistory();
   const prefersReducedMotion = usePrefersReducedMotion();
   const animation = prefersReducedMotion
@@ -63,7 +63,7 @@ const Initial = ({ startQuiz }) => {
       bgImage={bgImage}
       bgPosition="center"
       bgRepeat="no-repeat"
-      bgSize="100%"
+      bgSize="cover"
     >
       <Center h="100vh">
         <Box
