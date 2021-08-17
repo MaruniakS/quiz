@@ -12,7 +12,6 @@ const QuestionStep = ({ onAnswer, onFinish }) => {
   const currentQuestion = QUESTIONS[qIndex];
 
   const handleAnswer = key => () => {
-    console.log('key', key, qIndex);
     if (!qIndex) setCategory(key);
     else onAnswer(key);
     if (qIndex === QUESTIONS.length - 1) onFinish();

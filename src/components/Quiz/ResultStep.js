@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useCallback, useEffect } from 'react';
 import { Flex, Image, Text, chakra, Box } from '@chakra-ui/react';
 import Card from '../common/Card';
 import CHARACTERS from '../../constants/characters';
+import firebase from '../../services/firebase';
 
 const TextRow = ({ title, text }) => (
   <Text mt={4}>
@@ -9,13 +10,26 @@ const TextRow = ({ title, text }) => (
   </Text>
 );
 
-const ResultStep = ({ answers }) => {
+const ResultStep = ({ answers, name }) => {
   const resultKey = Object.keys(answers).reduce((a, b) =>
     answers[a] > answers[b] ? a : b
   );
   const resultCharacter = CHARACTERS[resultKey];
 
   const { description, icon, pros, cons, title } = resultCharacter;
+
+  const sendResults = useCallback(() => {
+    const db = firebase.firestore();
+
+    db.collection('results').add({
+      name,
+      character: title,
+    });
+  }, [name, title]);
+
+  useEffect(() => {
+    sendResults();
+  }, [sendResults]);
 
   return (
     <Box w="620px">

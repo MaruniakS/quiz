@@ -31,7 +31,7 @@ const Quiz = () => {
       );
     if (step === 2)
       return <QuestionStep onAnswer={setAnswer} onFinish={goForward} />;
-    return <ResultStep answers={answersState} />;
+    return <ResultStep answers={answersState} name={name} />;
   };
 
   return (
