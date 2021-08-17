@@ -68,7 +68,7 @@ const Initial = () => {
       <Center h="100vh">
         <Box
           position="relative"
-          fontSize="8xl"
+          fontSize={{base: '5xl', lg: '8xl'}}
           fontWeight="extrabold"
           zIndex="10"
           letterSpacing="wider"

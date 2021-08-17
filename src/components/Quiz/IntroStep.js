@@ -7,7 +7,7 @@ import { Text, Button, Box, HStack } from '@chakra-ui/react';
 const IntroStep = ({ startQuiz }) => {
   const handleSkip = () => (window.location.href = 'https://kindgeek.com');
   return (
-    <Box width="420px">
+    <Box width="90%" maxW="420px" mb={20}>
       <Card>
         <Text>
           Привіт Гік!
@@ -16,7 +16,9 @@ const IntroStep = ({ startQuiz }) => {
           драйвово, пропонуємо пройти невеликий тест, котрий покаже, якого
           роду-племені ти Добрий Гік.
           <br />
-          <Text fontSize="md" as="em">* Контент є розважального характеру</Text>
+          <Text fontSize="md" as="em">
+            * Контент є розважального характеру
+          </Text>
         </Text>
       </Card>
       <HStack pt={8} justify="center">

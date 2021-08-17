@@ -12,7 +12,7 @@ const NameStep = ({ name, onChange, onStart }) => {
   };
 
   return (
-    <Box w="420px">
+    <Box w="90%" maxW="420px" mb={20}>
       <Card>
         <Question>Напиши своє ім'я та прізвище</Question>
         <Flex mt="6" alignItems="center">

@@ -40,10 +40,9 @@ const Quiz = () => {
       bgPosition="center"
       bgRepeat="no-repeat"
       bgSize="cover"
-      height="100vh"
       textAlign="center"
     >
-      <Center maxWidth="100%" m="auto" pt={40}>
+      <Center maxWidth="100%" m="auto" pt={{ base: 20, lg: 40 }}>
         {renderStep()}
       </Center>
     </Box>

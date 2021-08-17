@@ -27,7 +27,7 @@ const QuestionStep = ({ onAnswer, onFinish }) => {
     : answers;
 
   return (
-    <Box w="420px">
+    <Box w="90%" maxW="420px" mb={20}>
       <Card>
         <Question>{title}</Question>
         <Box mt="6">

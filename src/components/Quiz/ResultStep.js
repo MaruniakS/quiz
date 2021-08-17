@@ -32,7 +32,7 @@ const ResultStep = ({ answers, name }) => {
   }, [sendResults]);
 
   return (
-    <Box w="620px">
+    <Box w="90%" maxW="620px" mb={20}>
       <Card>
         <Flex direction="column">
           <Image src={icon} h={125} w={125} m="auto" />
