@@ -41,6 +41,7 @@ const Quiz = () => {
       bgRepeat="no-repeat"
       bgSize="cover"
       textAlign="center"
+      minH="100vh"
     >
       <Center maxWidth="100%" m="auto" pt={{ base: 20, lg: 40 }}>
         {renderStep()}

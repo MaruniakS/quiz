@@ -24,6 +24,7 @@ const ResultStep = ({ answers, name }) => {
     db.collection('results').add({
       name,
       character: title,
+      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
     });
   }, [name, title]);
 
