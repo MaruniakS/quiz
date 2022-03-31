@@ -34,7 +34,7 @@ const QuestionStep = ({ onAnswer, onFinish }) => {
           {availableAnswers.map(({ text, weapon, category }) => (
             <Answer
               onClick={handleAnswer(category || weapon)}
-              key={category || weapon}
+              key={`${title}-${category || weapon}`}
             >
               {text}
             </Answer>
