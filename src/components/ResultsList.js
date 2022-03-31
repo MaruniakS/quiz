@@ -20,7 +20,7 @@ const ResultsList = () => {
 
   useEffect(() => {
     const db = firebase.firestore();
-    db.collection('results')
+    db.collection('war_results')
       .orderBy('timestamp', 'desc')
       .get()
       .then(({ docs }) => {
@@ -37,15 +37,15 @@ const ResultsList = () => {
       data: results,
       fileName,
       exportType,
-      fields: ['name', 'character'],
+      fields: ['name', 'weapon'],
     });
   };
 
   const calculatedResults = results.reduce((acc, curr) => {
-    const currCharacter = curr.character;
+    const currWeapon = curr.weapon;
     return {
       ...acc,
-      [currCharacter]: acc[currCharacter] ? acc[currCharacter] + 1 : 1,
+      [currWeapon]: acc[currWeapon] ? acc[currWeapon] + 1 : 1,
     };
   }, {});
 
@@ -66,14 +66,14 @@ const ResultsList = () => {
           <Thead>
             <Tr>
               <Th>Name</Th>
-              <Th>Character</Th>
+              <Th>Weapon</Th>
             </Tr>
           </Thead>
           <Tbody>
-            {results.map(({ name, character }) => (
-              <Tr key={`${name}:${character}`}>
+            {results.map(({ name, weapon }) => (
+              <Tr key={`${name}:${weapon}`}>
                 <Td>{name}</Td>
-                <Td>{character}</Td>
+                <Td>{weapon}</Td>
               </Tr>
             ))}
           </Tbody>
@@ -83,7 +83,7 @@ const ResultsList = () => {
         <Table variant="simple">
           <Thead>
             <Tr>
-              <Th>Character</Th>
+              <Th>Weapon</Th>
               <Th>Amount</Th>
             </Tr>
           </Thead>

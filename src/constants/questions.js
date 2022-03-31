@@ -1,164 +1,196 @@
-import CHARACTERS, { CATEGORIES } from './characters';
+import WEAPONS, { CATEGORIES } from './weapons';
 
 const QUESTIONS = [
   {
-    title: 'У Slack надаю перевагу:',
+    title: 'Твоє найкраще заспокійливе?',
     answers: [
       {
-        text: 'Розважальному контенту (#меми, random, astro_geek etc)',
-        category: CATEGORIES.FUN
-      },
-      {
-        text: 'Офіційному контенту (#general, team-chats, insusance questions ets.)',
+        text: 'Олексій Арестович',
         category: CATEGORIES.STRICT
       },
-    ],
-  },
-  {
-    title: 'Мій день починається з',
-    answers: [
       {
-        text: 'чату "меми"',
-        character: CHARACTERS.OFFICE_JOKER.key,
-      },
-      {
-        text: 'кави',
-        character: CHARACTERS.COFFEE_ADDICTED.key,
-      },
-      {
-        text: 'смачного сніданку',
-        character: CHARACTERS.FOODIE.key,
-      },
-      {
-        text: 'з новин вчорашнього дня',
-        character: CHARACTERS.CHATTERBOX.key,
-      },
-      {
-        text: '"раночку"',
-        character: CHARACTERS.WORKAHOLIC.key,
-      },
-      {
-        text: 'го в руму',
-        character: CHARACTERS.SCHEDULER.key,
-      },
-      {
-        text: 'чату "general"',
-        character: CHARACTERS.GEEK.key,
-      },
-      {
-        text: 'вічно кудись їду',
-        character: CHARACTERS.BMW.key,
+        text: 'Віталій Кім',
+        category: CATEGORIES.FUN
       },
     ],
   },
   {
-    title: 'Що на обід?',
+    title: 'Хто твій краш?',
     answers: [
       {
-        text: 'вмовлю всіх в тімі скинутися на піцу',
-        character: CHARACTERS.OFFICE_JOKER.key,
+        text: 'ЗСУ',
+        weapon: WEAPONS.BAYRAKTAR.key
       },
       {
-        text: 'кава',
-        character: CHARACTERS.COFFEE_ADDICTED.key,
+        text: 'Євген Карась',
+        weapon: WEAPONS.JAVELIN.key
       },
       {
-        text: 'пишу в фудордерінг, точно шось замовимо',
-        character: CHARACTERS.FOODIE.key,
+        text: 'Азов',
+        weapon: WEAPONS.MI8.key
       },
       {
-        text: 'візьму те, що лишиться в автоматі з снеками',
-        character: CHARACTERS.CHATTERBOX.key,
+        text: 'ТрО',
+        weapon: WEAPONS.SU27.key
       },
       {
-        text: 'нема обіду, дедлайни горять',
-        character: CHARACTERS.WORKAHOLIC.key,
+        text: 'ДСНС',
+        weapon: WEAPONS.AK47.key
       },
       {
-        text: 'мій судочок завжди зі мною',
-        character: CHARACTERS.SCHEDULER.key,
+        text: 'ЗСУ',
+        weapon: WEAPONS.MOLOTOV.key
       },
       {
-        text: 'Каютка',
-        character: CHARACTERS.GEEK.key,
+        text: 'Євген Карась',
+        weapon: WEAPONS.GOOSE.key
       },
       {
-        text: 'поїду в якийсь заклад',
-        character: CHARACTERS.BMW.key,
+        text: 'АЗОВ',
+        weapon: WEAPONS.CUCUMBER.key
+      },
+      {
+        text: 'ТрО',
+        weapon: WEAPONS.GOPNIK.key
+      },
+      {
+        text: 'ДСНС',
+        weapon: WEAPONS.TRAKTOR.key
       },
     ],
   },
   {
-    title: 'Як справи з дедлайнами?',
+    title: 'Нічний жах ДОН-ДОНа',
     answers: [
       {
-        text: 'дедлайни - ху...',
-        character: CHARACTERS.OFFICE_JOKER.key,
+        text: 'Степан Бандера',
+        weapon: WEAPONS.BAYRAKTAR.key
       },
       {
-        text: "от, вип'ю кави і йду, бо все горить",
-        character: CHARACTERS.COFFEE_ADDICTED.key,
+        text: 'Остап Бендер',
+        weapon: WEAPONS.JAVELIN.key
       },
       {
-        text: 'незнаю, але я б поїв/ла. Піцу будеш?',
-        character: CHARACTERS.FOODIE.key,
+        text: '"Бандерас"',
+        weapon: WEAPONS.MI8.key
       },
       {
-        text: 'колеги завжди підстрахують',
-        character: CHARACTERS.CHATTERBOX.key,
+        text: 'Робот Бендер',
+        weapon: WEAPONS.SU27.key
       },
       {
-        text: 'я починаю працювати зі світанком, то ви як думаєте?',
-        character: CHARACTERS.WORKAHOLIC.key,
+        text: 'Антоніо Бандерас',
+        weapon: WEAPONS.AK47.key
       },
       {
-        text: 'я вношу все в календар на відміну від інших дурників, тому в мене все топчик',
-        character: CHARACTERS.SCHEDULER.key,
+        text: 'Степан Бандера',
+        weapon: WEAPONS.MOLOTOV.key
       },
       {
-        text: 'вони горять, а я не парюся і все якось завжди вирішується',
-        character: CHARACTERS.GEEK.key,
+        text: 'Остап Бендер',
+        weapon: WEAPONS.GOOSE.key
       },
       {
-        text: 'все просто. вони горять',
-        character: CHARACTERS.BMW.key,
+        text: '"Бандерас"',
+        weapon: WEAPONS.CUCUMBER.key
+      },
+      {
+        text: 'Робот Бендер',
+        weapon: WEAPONS.GOPNIK.key
+      },
+      {
+        text: 'Антоніо Бандерас',
+        weapon: WEAPONS.TRAKTOR.key
       },
     ],
   },
   {
-    title: 'Шо там по відпустці?',
+    title: 'Пісня, що на повторі',
     answers: [
       {
-        text: 'поїду всеодно де, аби з веселою команією',
-        character: CHARACTERS.OFFICE_JOKER.key,
+        text: 'Ой у лузі червнона калина (Andriy Khlyvnyuk& THE KYIVNESS)',
+        weapon: WEAPONS.BAYRAKTAR.key
       },
       {
-        text: 'спробую Туреччину, кажуть там найсмачніша кава',
-        character: CHARACTERS.COFFEE_ADDICTED.key,
+        text: 'Гімн України',
+        weapon: WEAPONS.JAVELIN.key
       },
       {
-        text: 'ммм, мі амор Італія - країна харчових шедеврів',
-        character: CHARACTERS.FOODIE.key,
+        text: 'Доброго вечора, ми з України... (Probass&Hardi)',
+        weapon: WEAPONS.MI8.key
       },
       {
-        text: 'поїду туди, куди порекомедують друзі',
-        character: CHARACTERS.CHATTERBOX.key,
+        text: 'Ой у лузі червнона калина (Andriy Khlyvnyuk& THE KYIVNESS)',
+        weapon: WEAPONS.SU27.key
       },
       {
-        text: 'воркейшин на морьку - мій ідеальний варік, аби ноут працював.',
-        character: CHARACTERS.WORKAHOLIC.key,
+        text: 'Гімн України',
+        weapon: WEAPONS.AK47.key
       },
       {
-        text: 'запланую вже наступного року, бо того вже все розписано',
-        character: CHARACTERS.SCHEDULER.key,
+        text: 'Ой у лузі червнона калина (Andriy Khlyvnyuk& THE KYIVNESS)',
+        weapon: WEAPONS.MOLOTOV.key
       },
       {
-        text: 'зберу тусовку Гіків і поїдемо разом аби-куди',
-        character: CHARACTERS.GEEK.key,
+        text: 'Гімн України',
+        weapon: WEAPONS.GOOSE.key
       },
       {
-        text: 'автотревел-чисто мій відпочинок',
-        character: CHARACTERS.BMW.key,
+        text: 'Доброго вечора, ми з України... (Probass&Hardi)',
+        weapon: WEAPONS.CUCUMBER.key
+      },
+      {
+        text: 'Ой у лузі червнона калина (Andriy Khlyvnyuk& THE KYIVNESS)',
+        weapon: WEAPONS.GOPNIK.key
+      },
+      {
+        text: 'Гімн України',
+        weapon: WEAPONS.TRAKTOR.key
+      },
+    ],
+  },
+  {
+    title: 'Якби ти вираховував окупанта?',
+    answers: [
+      {
+        text: 'Нехай скаже ПАЛЯНИЦЯ!',
+        weapon: WEAPONS.BAYRAKTAR.key
+      },
+      {
+        text: 'Запитав би, де найближче відділення монобанку',
+        weapon: WEAPONS.JAVELIN.key
+      },
+      {
+        text: 'Нехай продовжить речення: Хіба ревуть воли...',
+        weapon: WEAPONS.MI8.key
+      },
+      {
+        text: 'Та стріляти їх, та й по-всьому, що там перевіряти?',
+        weapon: WEAPONS.SU27.key
+      },
+      {
+        text: 'Нехай продовжить речення: Мертві бджоли не гудуть',
+        weapon: WEAPONS.AK47.key
+      },
+      {
+        text: 'Нехай скаже ПАЛЯНИЦЯ!',
+        weapon: WEAPONS.MOLOTOV.key
+      },
+      {
+        text: 'Запитав би, де найближче відділення монобанку',
+        weapon: WEAPONS.GOOSE.key
+      },
+      {
+        text: 'Нехай продовжить речення: Хіба ревуть воли...',
+        weapon: WEAPONS.CUCUMBER.key
+      },
+      {
+        text: 'Та стріляти їх, та й по-всьому, що там перевіряти?',
+        weapon: WEAPONS.GOPNIK.key
+      },
+      {
+        text: 'Нехай продовжить речення: Мертві бджоли не гудуть',
+        weapon: WEAPONS.TRAKTOR.key
       },
     ],
   },

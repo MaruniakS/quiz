@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect } from 'react';
 import { Flex, Image, Text, chakra, Box } from '@chakra-ui/react';
 import Card from '../common/Card';
-import CHARACTERS from '../../constants/characters';
+import WEAPONS from '../../constants/weapons';
 import firebase from '../../services/firebase';
 
 const TextRow = ({ title, text }) => (
@@ -14,16 +14,16 @@ const ResultStep = ({ answers, name }) => {
   const resultKey = Object.keys(answers).reduce((a, b) =>
     answers[a] > answers[b] ? a : b
   );
-  const resultCharacter = CHARACTERS[resultKey];
+  const resultWeapon = WEAPONS[resultKey];
 
-  const { description, icon, pros, cons, title } = resultCharacter;
+  const { description, icon, pros, cons, title } = resultWeapon;
 
   const sendResults = useCallback(() => {
     const db = firebase.firestore();
 
-    db.collection('results').add({
+    db.collection('war_results').add({
       name,
-      character: title,
+      weapon: title,
       timestamp: firebase.firestore.FieldValue.serverTimestamp(),
     });
   }, [name, title]);

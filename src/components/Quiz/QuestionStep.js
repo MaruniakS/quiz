@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Box } from '@chakra-ui/react';
-import CHARACTERS from '../../constants/characters';
+import WEAPONS from '../../constants/weapons';
 import QUESTIONS from '../../constants/questions';
 import Answer from '../common/Answer';
 import Card from '../common/Card';
@@ -20,21 +20,29 @@ const QuestionStep = ({ onAnswer, onFinish }) => {
 
   const { title, answers } = currentQuestion;
 
+  console.log('answers', answers)
   const availableAnswers = category
     ? answers.filter(
-        ({ character }) => CHARACTERS[character].category === category
+      ({ weapon }) => {
+        console.log(weapon, WEAPONS[weapon])
+        return WEAPONS[weapon].category === category
+      }
+        // ({ weapon }) =>  WEAPONS[weapon].category === category
       )
     : answers;
+
+    console.log('answers', answers)
+    console.log('available', availableAnswers)
 
   return (
     <Box w="90%" maxW="420px" mb={20}>
       <Card>
         <Question>{title}</Question>
         <Box mt="6">
-          {availableAnswers.map(({ text, character, category }) => (
+          {availableAnswers.map(({ text, weapon, category }) => (
             <Answer
-              onClick={handleAnswer(category || character)}
-              key={category || character}
+              onClick={handleAnswer(category || weapon)}
+              key={category || weapon}
             >
               {text}
             </Answer>
