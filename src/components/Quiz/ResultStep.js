@@ -16,7 +16,7 @@ const ResultStep = ({ answers, name }) => {
   );
   const resultWeapon = WEAPONS[resultKey];
 
-  const { description, icon, pros, cons, title } = resultWeapon;
+  const { description, image, title } = resultWeapon;
 
   const sendResults = useCallback(() => {
     const db = firebase.firestore();
@@ -36,10 +36,8 @@ const ResultStep = ({ answers, name }) => {
     <Box w="90%" maxW="620px" mb={20}>
       <Card>
         <Flex direction="column">
-          <Image src={icon} h={125} w={125} m="auto" />
+          <Image src={image} h={125} w={125} m="auto" shadow="md" borderRadius="full" />
           <TextRow title={title} text={description} key="main" />
-          <TextRow title="Плюси" text={pros} key="pros" />
-          <TextRow title="Мінуси" text={cons} key="cons" />
         </Flex>
       </Card>
     </Box>

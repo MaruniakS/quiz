@@ -2,7 +2,6 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import { ChakraProvider, Box, theme } from '@chakra-ui/react';
 import Quiz from './components/Quiz/Quiz';
-import Initial from './components/Initial';
 import ResultsList from './components/ResultsList';
 
 const App = () => (
@@ -10,8 +9,7 @@ const App = () => (
     <Box textAlign="center" fontSize="xl">
       <Router>
         <Switch>
-          <Route exact path="/" component={Initial} />
-          <Route path="/quiz" component={Quiz} />
+          <Route exact path="/" component={Quiz} />
           <Route path="/results" component={ResultsList} />
         </Switch>
       </Router>

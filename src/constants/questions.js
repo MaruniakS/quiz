@@ -120,11 +120,11 @@ const QUESTIONS = [
         weapon: WEAPONS.MI8.key
       },
       {
-        text: 'Ой у лузі червнона калина (Andriy Khlyvnyuk& THE KYIVNESS)',
+        text: 'Стефанія (Калуш Оркестра)',
         weapon: WEAPONS.SU27.key
       },
       {
-        text: 'Гімн України',
+        text: 'Лента за лентою (УПА)',
         weapon: WEAPONS.AK47.key
       },
       {
@@ -132,19 +132,19 @@ const QUESTIONS = [
         weapon: WEAPONS.MOLOTOV.key
       },
       {
-        text: 'Гімн України',
+        text: 'Доброго вечора, ми з України... (Probass&Hardi)',
         weapon: WEAPONS.GOOSE.key
       },
       {
-        text: 'Доброго вечора, ми з України... (Probass&Hardi)',
+        text: 'Гімн України',
         weapon: WEAPONS.CUCUMBER.key
       },
       {
-        text: 'Ой у лузі червнона калина (Andriy Khlyvnyuk& THE KYIVNESS)',
+        text: 'Стефанія (Калуш Оркестра)',
         weapon: WEAPONS.GOPNIK.key
       },
       {
-        text: 'Гімн України',
+        text: 'Лента за лентою (УПА)',
         weapon: WEAPONS.TRAKTOR.key
       },
     ],
@@ -169,7 +169,7 @@ const QUESTIONS = [
         weapon: WEAPONS.SU27.key
       },
       {
-        text: 'Нехай продовжить речення: Мертві бджоли не гудуть',
+        text: 'Запитав би, що не роблять мертві бджоли?',
         weapon: WEAPONS.AK47.key
       },
       {
@@ -189,7 +189,7 @@ const QUESTIONS = [
         weapon: WEAPONS.GOPNIK.key
       },
       {
-        text: 'Нехай продовжить речення: Мертві бджоли не гудуть',
+        text: 'Запитав би, що не роблять мертві бджоли?',
         weapon: WEAPONS.TRAKTOR.key
       },
     ],

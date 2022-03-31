@@ -20,22 +20,14 @@ const QuestionStep = ({ onAnswer, onFinish }) => {
 
   const { title, answers } = currentQuestion;
 
-  console.log('answers', answers)
   const availableAnswers = category
     ? answers.filter(
-      ({ weapon }) => {
-        console.log(weapon, WEAPONS[weapon])
-        return WEAPONS[weapon].category === category
-      }
-        // ({ weapon }) =>  WEAPONS[weapon].category === category
+        ({ weapon }) =>  WEAPONS[weapon].category === category
       )
     : answers;
 
-    console.log('answers', answers)
-    console.log('available', availableAnswers)
-
   return (
-    <Box w="90%" maxW="420px" mb={20}>
+    <Box w="90%" maxW="600px" mb={20}>
       <Card>
         <Question>{title}</Question>
         <Box mt="6">

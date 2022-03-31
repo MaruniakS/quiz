@@ -12,7 +12,7 @@ const NameStep = ({ name, onChange, onStart }) => {
   };
 
   return (
-    <Box w="90%" maxW="420px" mb={20}>
+    <Box w="90%" maxW="600px" mb={20}>
       <Card>
         <Question>Напиши своє ім'я та прізвище</Question>
         <Flex mt="6" alignItems="center">
@@ -22,7 +22,7 @@ const NameStep = ({ name, onChange, onStart }) => {
             borderColor="#FE834E"
             value={name}
             onChange={onChange}
-            width="300px"
+            width="100%"
             _hover={{
               borderColor: '#FF43CA',
             }}

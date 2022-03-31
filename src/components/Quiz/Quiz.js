@@ -3,7 +3,7 @@ import { Box, Center } from '@chakra-ui/react';
 import NameStep from './NameStep';
 import IntroStep from './IntroStep';
 
-import bgImage from '../../images/quiz-bg.png';
+import bgImage from '../../images/background.png';
 import QuestionStep from './QuestionStep';
 import ResultStep from './ResultStep';
 

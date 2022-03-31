@@ -7,14 +7,13 @@ import { Text, Button, Box, HStack } from '@chakra-ui/react';
 const IntroStep = ({ startQuiz }) => {
   const handleSkip = () => (window.location.href = 'https://kindgeek.com');
   return (
-    <Box width="90%" maxW="420px" mb={20}>
+    <Box width="90%" maxW="600px" mb={20}>
       <Card>
         <Text>
           Привіт Гік!
           <br />
-          Саме час готуватися до корпоративу. А щоб було максимально круто та
-          драйвово, пропонуємо пройти невеликий тест, котрий покаже, якого
-          роду-племені ти Добрий Гік.
+          Ми не припиняли працювати ані на день. Проте, перші декілька діб після початку повномасштабного вторгнення були  складними, у всієї країни був шок.
+           Проте Український народ це народ волі і козацтва і як тут без гумору, саме тому ми підготували маленький тест "Яка ти зброя проти москаля?"
           <br />
           <Text fontSize="md" as="em">
             * Контент є розважального характеру
@@ -27,23 +26,24 @@ const IntroStep = ({ startQuiz }) => {
           px={16}
           py={2}
           color="white"
-          bgColor="#C4C4C4"
+          bgColor="#005BBB"
           onClick={handleSkip}
         >
-          Skip
+          Йой не хочу
         </Button>
         <Button
           borderRadius="2xl"
           px={16}
           py={2}
           color="white"
-          bgGradient="linear-gradient(180deg, #FF43CA 0%, #FE834E 100%);"
+          
+          bgGradient="linear-gradient(180deg, #FFC700 0%, #FFC700 100%);"
           _hover={{
-            bgGradient: 'linear-gradient(180deg, #FE834E 0%, #FF43CA 100%);',
+            bgGradient: 'linear-gradient(180deg, #FFC700 0%, #FFC700 100%);',
           }}
           onClick={startQuiz}
         >
-          Start
+          ану, стартуємо
         </Button>
       </HStack>
     </Box>
